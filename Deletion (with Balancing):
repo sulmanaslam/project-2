@@ -1,0 +1,10 @@
+Deletion (with Balancing):
+    def delete(self, data):
+        self.root = self._delete_recursive(self.root, data)
+        return self.root
+
+    def _delete_recursive(self, node, data):
+        if node is None:
+            return node
+
+        elif data
