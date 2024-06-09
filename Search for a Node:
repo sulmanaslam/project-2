@@ -1,0 +1,14 @@
+Search for a Node
+    def search(self, data):
+        return self._search_recursive(self.root, data)
+
+    def _search_recursive(self, node, data):
+        if node is None:
+            return None  # Node not found
+
+        elif data < node.data:
+            return self._search_recursive(node.left, data)
+        elif data > node.data:
+            return self._search_recursive(node.right, data)
+        else:
+            return node  # Node found
