@@ -1,0 +1,14 @@
+Right Rotation
+    def right_rotate(self, y):
+        x = y.left
+        T2 = x.right
+
+        # Perform rotation
+        x.right = y
+        y.left = T2
+
+        # Update heights
+        y.height = max(self.get_height(y.left), self.get_height(y.right)) + 1
+        x.height = max(self.get_height(x.left), self.get_height(x.right)) + 1
+
+        return x
